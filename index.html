@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todo">
+<head>
+    <meta charset="UTF-8">
+    <title>TodoList</title>
+    <script type="text/javascript" src="lib/js/angular.js"></script>
+    <script type="text/javascript" src="lib/js/angular-route.js"></script>
+    <script type="text/javascript" src="lib/js/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+
+    <!-- OwnLibrary -->
+    <script type="text/javascript" src="Controller/todo.js"></script>
+    <link rel="stylesheet" href="Css/style.css">
+
+</head>
+<body ng-controller="todoCtrl">
+<div class="container">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-xs-4 col-xs-offset-4">
+        <div>
+        <h2>ToDoList</h2>
+        </div>
+        <br>
+        <form name="addContactForm">
+            <div class="form-group">
+                <label><b>Title:</b><i>{{Title}}</i></label>
+                <input class="form-control" type="text" placeholder="Title" ng-model="Title" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label><b>Full Name:</b><i>{{Name}}</i></label>
+                <input class="form-control" type="text" placeholder="FullName" ng-model="Name" required>
+            </div>
+            <br>
+            <div class="from-group">
+                <label><b>Dollar Amount:</b><i>{{Amount}}</i></label>
+                <input class="form-control" type="text" placeholder="Amount" ng-model="Amount" required>
+            </div>
+            <br>
+            <div>
+                <label><b>Descripton:</b><i>{{Newdescription}}</i></label>
+                <textarea class="form-control" type="text" placeholder="Addition Infromation" ng-model="Newdescription" required></textarea>
+            </div>
+            <br>
+            <div>
+            <a ng-click="addContact()">&darr;AddList</a>
+            </div>
+            <p class="warning">{{failed}}</p>
+        </form>
+                <ul ng-repeat="cont in local">
+                    <li>Id;{{cont.id}}</li>
+                    <li>Title:{{cont.Title}}</li>
+                    <li>Full Name:{{cont.Fullname}}</li>
+                    <li>Dollar Amount:{{cont.Dollar}}</li>
+                    <li>Description:{{cont.Newdescription}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+</body>
+</html>
