@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RootScope</title>
+    <script type="text/javascript" src="lib/js/angular.js"></script>
+    <script type="text/javascript" src="lib/js/angular-route.js"></script>
+    <script type="text/javascript" src="lib/js/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+
+    <script type="text/javascript" src="Controller/Root.js"></script>
+</head>
+<body ng-app="myApp" id=1>
+Global value is {{Counter}}<br />
+<div ng-controller="Function1">
+    Child Instance of {{ControllerName}} created :- {{Counter}}
+</div><br />
+<div ng-controller="Function2">
+    Child Instance of {{ControllerName}} created :- {{Counter}}
+</div><br />
+<div ng-controller="Function1">
+    Child Instance of {{ControllerName}} created :- {{Counter}}
+</div><br />
+<div ng-controller="Function2">
+    Child Instance of {{ControllerName}} created :- {{Counter}}
+</div><br />
+
+</body>
+</html>
